@@ -1,4 +1,6 @@
 import './globals.css'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,4 +20,8 @@ export default function RootLayout({
       <body className={inter.className}>{children}</body>
     </html>
   )
+}
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired
 }
